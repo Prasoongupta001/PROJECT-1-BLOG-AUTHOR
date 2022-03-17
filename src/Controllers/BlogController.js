@@ -177,7 +177,7 @@ const updateBlog = async function (req, res) {
                     body: req.body.body,
                     category: req.body.category
                 },
-                $push: {
+                $addToSet: {
                     tags: req.body.tags,
                     subcategory: req.body.subcategory
                 }
